@@ -1,6 +1,6 @@
 let form = document.getElementById("form")
 let table = document.getElementById("table")
-let table_body = document.createElement("tbody")
+let table_body = document.getElementById("tbody")
 let first_name = form.elements[0]
 let last_name = form.elements[1]
 let address = form.elements[2]
@@ -11,8 +11,9 @@ let gender = document.getElementsByName("gender")
 let select= document.getElementById("options")
 let append_data = false
 let error = document.getElementById("error")
+document.getElementById("title").innerHTML="Form manipulation by DOM"
 
-function formsubmission(){
+function formsubmission(){e
     let selectedoptions = []
     let table_row = document.createElement("tr") 
     let c1 = document.createElement("td")

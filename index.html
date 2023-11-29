@@ -18,29 +18,34 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
+                    <div class="card-header">
+                        <h1 id="title"></h1>
+                    </div>
                     <div class="card-body ">
+                        <p id="description">complete the form to get entered into the table</p>
                          <form action="" id="form" onsubmit="event.preventDefault();">
                             <div class="row">
                                 <div class="form-group col">
-                                    <label for="first_name">First name</label>
-                                    <input type="text" class="form-control" id="first_name"
-                                    placeholder="enter your first name">
+                                    <label for="first-name">First name</label>
+                                    <input type="text" class="form-control" id="first-name"
+                                    placeholder="enter your first name" required>
                                 </div>
                                 <div class="form-group col">
-                                    <label for="last_name">Last name</label>
-                                    <input type="text" class="form-control" id="last_name"
-                                    placeholder="enter your last name">
+                                    <label for="last-name">Last name</label>
+                                    <input type="text" class="form-control" id="last-name"
+                                    placeholder="enter your last name" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col">
                                     <label for="address">Address</label>
-                                    <input type="text" class="form-control" id="address">
+                                    <!-- <input type="textarea" class="form-control" id="address" required> -->
+                                    <textarea id="address" required class="form-control" placeholder="enter your address"></textarea>
                                 </div>
                                 <div class="form-group col">
                                     <label for="pincode">pincode</label>
-                                    <input type=number class="form-control" id="pincode"
-                                    placeholder="641603">
+                                    <input type=text class="form-control" id="pincode"
+                                    placeholder="641603" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -80,7 +85,7 @@
 
                             </div>
                             <div>
-                                <button class="btn-primary" onclick={formsubmission()}>Submit</button>
+                                <button class="btn-primary btn" id="submit" onclick={formsubmission()}>Submit</button>
                             </div>
 
                         </form>
@@ -97,6 +102,9 @@
                                     <th scope="col">food options</th>
                                 </tr>
                             </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
                             
                         </table>
 
@@ -105,7 +113,7 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
